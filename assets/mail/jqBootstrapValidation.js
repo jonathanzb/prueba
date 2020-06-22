@@ -1,12 +1,3 @@
-/* jqBootstrapValidation
- * A plugin for automating validation on Twitter Bootstrap formatted forms.
- *
- * v1.3.6
- *
- * License: MIT <http://opensource.org/licenses/mit-license.php> - see LICENSE file
- *
- * http://ReactiveRaven.github.com/jqBootstrapValidation/
- */
 
 (function($) {
 
@@ -16,16 +7,16 @@
     options: {
       prependExistingHelpBlock: false,
       sniffHtml: true, // sniff for 'required', 'maxlength', etc
-      preventSubmit: true, // stop the form submit event from firing if validation fails
-      submitError: false, // function called if there is an error when trying to submit
-      submitSuccess: false, // function called just before a successful submit event is sent to the server
-      semanticallyStrict: false, // set to true to tidy up generated HTML output
+      preventSubmit: true, // detener la activación del evento de envío del formulario si falla la validación
+      submitError: false, // función llamada si hay un error al intentar enviar
+      submitSuccess: false, // función llamada justo antes de que se envíe un evento de envío exitoso al servidor
+      semanticallyStrict: false, // establecido en verdadero para ordenar la salida HTML generada
       autoAdd: {
         helpBlocks: true
       },
       filter: function() {
-        // return $(this).is(":visible"); // only validate elements you can see
-        return true; // validate everything
+        // return $(this).is(":visible"); // solo valide elementos que pueda ver
+        return true; // validar todo
       }
     },
     methods: {
@@ -80,14 +71,14 @@
 
         return this.each(function() {
 
-          // Get references to everything we're interested in
+          // Obtenga referencias de todo lo que nos interesa
           var $this = $(this),
             $controlGroup = $this.parents(".form-group").first(),
             $helpBlock = $controlGroup.find(".help-block").first(),
             $form = $this.parents("form").first(),
             validatorNames = [];
 
-          // create message container if not exists
+          // crear contenedor de mensajes si no existe
           if (!$helpBlock.length && settings.options.autoAdd && settings.options.autoAdd.helpBlocks) {
             $helpBlock = $('<div class="help-block" />');
             $controlGroup.find('.controls').append($helpBlock);
@@ -183,7 +174,7 @@
             //                                                     EMAIL
             // ---------------------------------------------------------
             if ($this.attr("type") !== undefined && $this.attr("type").toLowerCase() === "email") {
-              message = "Not a valid email address<!-- data-validator-validemail-message to override -->";
+              message = "Correo no valido<!-- data-validator-validemail-message to override -->";
               if ($this.data("validationValidemailMessage")) {
                 message = $this.data("validationValidemailMessage");
               } else if ($this.data("validationEmailMessage")) {

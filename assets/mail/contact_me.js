@@ -4,21 +4,21 @@ $(function () {
     ).jqBootstrapValidation({
         preventSubmit: true,
         submitError: function ($form, event, errors) {
-            // additional error messages or events
+            // mensajes de error adicionales o eventos
         },
         submitSuccess: function ($form, event) {
-            event.preventDefault(); // prevent default submit behaviour
-            // get values from FORM
+            event.preventDefault(); // evitar el comportamiento de envío predeterminado
+            // obtener valores from FORM
             var name = $("input#name").val();
             var email = $("input#email").val();
             var phone = $("input#phone").val();
             var message = $("textarea#message").val();
-            var firstName = name; // For Success/Failure Message
+            var firstName = name; // Mensaje de éxito / fracaso
             if (firstName.indexOf(" ") >= 0) {
                 firstName = name.split(" ").slice(0, -1).join(" "); 
             }
             $this = $("#sendMessageButton");
-            $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
+            $this.prop("disabled", true); // Deshabilite el botón de envío hasta que la llamada AJAX se complete para evitar mensajes duplicados
             $.ajax({
                 url: "welcome/enviar",
                 type: "POST",
@@ -30,7 +30,7 @@ $(function () {
                 },
                 cache: false,
                 success: function () {
-                    // Success message
+                    // Mensaje de éxito
                     $("#success").html("<div class='alert alert-success'>");
                     $("#success > .alert-success")
                         .html(
@@ -38,14 +38,14 @@ $(function () {
                         )
                         .append("</button>");
                     $("#success > .alert-success").append(
-                        "<strong>Your message has been sent. </strong>"
+                        "<strong>Mensaje enviado con exitorgfre. </strong>"
                     );
                     $("#success > .alert-success").append("</div>");
-                    //clear all fields
+                    //borrar todos los campos
                     $("#contactForm").trigger("reset");
                 },
                 error: function () {
-                    // Fail message
+                    // Mensaje de error
                     $("#success").html("<div class='alert alert-danger'>");
                     $("#success > .alert-danger")
                         .html(
@@ -60,12 +60,12 @@ $(function () {
                         )
                     );
                     $("#success > .alert-danger").append("</div>");
-                    //clear all fields
+                    //borrar todos los campos
                     $("#contactForm").trigger("reset");
                 },
                 complete: function () {
                     setTimeout(function () {
-                        $this.prop("disabled", false); // Re-enable submit button when AJAX call is complete
+                        $this.prop("disabled", false); // Vuelva a habilitar el botón de envío cuando se complete la llamada AJAX
                     }, 1000);
                 },
             });

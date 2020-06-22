@@ -119,8 +119,7 @@
                     <img class="img-fluid" src="assets/img/portfolio/app.png" alt="" />
                 </a>
                 <div class="portfolio-caption">
-                    <div class="portfolio-caption-heading">Threads</div>
-                    <div class="portfolio-caption-subheading text-muted">Illustration</div>
+                    <div class="portfolio-caption-heading">Innovación</div>
                 </div>
             </div>
         </div>
@@ -133,8 +132,7 @@
                     <img class="img-fluid" src="assets/img/portfolio/salu2.png" alt="" />
                 </a>
                 <div class="portfolio-caption">
-                    <div class="portfolio-caption-heading">Explore</div>
-                    <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
+                    <div class="portfolio-caption-heading">Tecnología</div>
                 </div>
             </div>
         </div>
@@ -147,8 +145,7 @@
                     <img class="img-fluid" src="assets/img/portfolio/salud.png" alt="" />
                 </a>
                 <div class="portfolio-caption">
-                    <div class="portfolio-caption-heading">Finish</div>
-                    <div class="portfolio-caption-subheading text-muted">Identity</div>
+                    <div class="portfolio-caption-heading">Ciencia</div>
                 </div>
             </div>
         </div>
@@ -161,8 +158,7 @@
                     <img class="img-fluid" src="assets/img/portfolio/tec.png" alt="" />
                 </a>
                 <div class="portfolio-caption">
-                    <div class="portfolio-caption-heading">Lines</div>
-                    <div class="portfolio-caption-subheading text-muted">Branding</div>
+                    <div class="portfolio-caption-heading">Salud</div>
                 </div>
             </div>
         </div>
@@ -175,8 +171,7 @@
                     <img class="img-fluid" src="assets/img/portfolio/web.png" alt="" />
                 </a>
                 <div class="portfolio-caption">
-                    <div class="portfolio-caption-heading">Southwest</div>
-                    <div class="portfolio-caption-subheading text-muted">Website Design</div>
+                    <div class="portfolio-caption-heading">Aplicativos</div>
                 </div>
             </div>
         </div>
@@ -189,8 +184,7 @@
                     <img class="img-fluid" src="assets/img/portfolio/jun.png" alt="" />
                 </a>
                 <div class="portfolio-caption">
-                    <div class="portfolio-caption-heading">Window</div>
-                    <div class="portfolio-caption-subheading text-muted">Photography</div>
+                    <div class="portfolio-caption-heading">Desarrollo</div>
                 </div>
             </div>
         </div>
@@ -237,7 +231,7 @@
         <div class="col-lg-4">
             <div class="team-member">
                 <img class="mx-auto rounded-circle" src="assets/img/team/profe.png" alt="" />
-                <h4>Profecional de la salud</h4>
+                <h4>Profecionales</h4>
                 <p class="text-muted">Vendiendo productos propios, únicos y creativos
                     Revendiendo productos de terceros y generando una comisión de cada venta. 
                     Publicidad.</p>
@@ -271,27 +265,27 @@
 <div class="container">
     <div class="text-center">
         <h2 class="section-heading text-uppercase">Contáctanos </h2>
-        <h3 class="section-subheading text-muted">¡Contáctanos y pon tu proyecto en marcha!</h3>
+        <h3 class="section-subheading text-muted"><center>¡Contáctanos y pon tu proyecto en marcha!</center></h3>
     </div>
     <form action="<?php echo base_url();?>Welcome/save" method="POST" id="contactForm" name="sentMessage" novalidate="novalidate">
         <div class="row align-items-stretch mb-5">
             <div class="col-md-6">
                 <div class="form-group">
-                    <input class="form-control" id="name" type="text" placeholder="Nombres *" required="required" data-validation-required-message="Please enter your name." />
+                    <input class="form-control" id="name" type="text" placeholder="Nombres " required="required" data-validation-required-message="Por favor ingrese su nombre." />
                     <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
-                    <input class="form-control" id="email" type="email" placeholder="Email *" required="required" data-validation-required-message="Please enter your name." />
+                    <input class="form-control" id="email" type="email" placeholder="Email " required="required" data-validation-required-message="El correo no es valido." />
                     <p class="help-block text-danger"></p>
                 </div>
                 <div class="form-group">
-                    <input class="form-control" id="phone" type="text" placeholder="Telefono *" required="required" data-validation-required-message="Please enter your name." />
+                    <input class="form-control" id="phone" type="text" placeholder="Telefono " required="required" data-validation-required-message="Por favor ingrese su nombre." />
                     <p class="help-block text-danger"></p>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="form-group form-group-textarea mb-md-0">
-                    <textarea class="form-control" id="message" placeholder="Your Message *" required="required" data-validation-required-message="Please enter a message."></textarea>
+                    <textarea class="form-control" id="message" placeholder="Dejanos tu mensaje " required="required" data-validation-required-message="Dejanos tu mensaje."></textarea>
                     <p class="help-block text-danger"></p>
                 </div>
             </div>
